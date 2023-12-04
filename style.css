@@ -6,6 +6,21 @@
     list-style: none;
 }
 
+/* ANIMATION - BODY */
+@keyframes load-page {
+    from{
+        opacity: 20%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+body{
+    animation: load-page 1s;
+}
+
+
 /* HEADER */
 header{            
     background: url(imgs/AI-background.jpg) no-repeat;
@@ -14,10 +29,19 @@ header{
 }
 
 .header-content{            
-    background-color: #1282A2;
+    background-color: #ffa600a1;
     text-align: center;
-    padding: 1rem 0rem .5rem 2rem;    
+    padding: 2.5rem 2.5rem .5rem 2.5rem;    
     color: #fff;
+    border-bottom: 1px solid #054455;
+}
+
+.logo img{
+    width: 10vmax;
+    height: 9vmax;
+    filter: invert();
+    float: left;
+    padding: 15px;
 }
 
 .logo p{
@@ -50,19 +74,54 @@ header{
     color: #ffd500;
 }
 
+/* ANIMATION */
+@keyframes margin-container{
+    from{
+        margin-left: -40px;
+    }   
+    to{
+        margin-left: 0;
+    }
+}
+
 .ai-infos{    
+    animation: margin-container 3s;
     padding: 3rem;
     background-color: #ffffff48;
+    border-bottom: 2px solid #ffd500;
 }
 
 .ai-infos h2{    
     font-size: 7vmax;
+    font-weight: 500;
     color: #ffd500;
 }
 
 .ai-infos p{
     color: #fff;
-    font-size: 2.5vmax;
+    font-size: 2.5vmax;    
+    margin-left: 2%;
+}
+
+/* ANIMATION */
+@keyframes load-bar {
+    from{
+        width: 0;
+    }   
+    to{
+        width: 100%;
+        opacity: 50%;
+    }
+}
+
+
+#animation{
+    animation: load-bar .5s 5;
+    background-color: #fff;
+    opacity: 50%;
+    width: 100%;
+    height: .2vmax;
+    display: block;
 }
 
 /* SECTION */
@@ -82,6 +141,7 @@ header{
 .sessions h2,
 .sessions h3{
     color: #ffa500;
+    font-weight: 400;
 }
 
 .sessions h2{
@@ -94,6 +154,7 @@ header{
 
 .sessions p{
     font-size: 2vw;
+    margin-left: 2%;
 }
 
 .text-list{
@@ -109,7 +170,8 @@ header{
 footer{
     background-color: #ffa500;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
+    font-size: 1.5em;
 }
 
 footer a{
