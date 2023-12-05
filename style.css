@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;    
-    font-family: Arial, Helvetica, sans-serif;
-    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;    
 }
 
 /* ANIMATION - BODY */
@@ -20,7 +19,6 @@ body{
     animation: load-page 1s;
 }
 
-
 /* HEADER */
 header{            
     background: url(imgs/AI-background.jpg) no-repeat;
@@ -28,20 +26,24 @@ header{
     align-items: center;    
 }
 
-.header-content{            
-    background-color: #ffa600a1;
+.header-content{                
+    background-color: #ffffff71;
     text-align: center;
     padding: 2.5rem 2.5rem .5rem 2.5rem;    
-    color: #fff;
-    border-bottom: 1px solid #054455;
+    color: #fff;    
 }
 
 .logo img{
     width: 10vmax;
     height: 9vmax;
-    filter: invert();
+    filter: invert();    
     float: left;
-    padding: 15px;
+    padding-bottom: 10px;
+}
+
+.logo h1{
+    font-size: 5vw;
+    font-weight: 500;
 }
 
 .logo p{
@@ -49,27 +51,33 @@ header{
     font-size: 70%;
 }
 
+.topics{
+    margin: 3% 0 2% 0;
+}
+
 .topics nav{
-    margin: 2%;
+    margin: 1% 0 1% 0;
 }
 
 .topics ul{    
     display: flex;
     justify-content: center;
     gap: 2%;
+    list-style: none;
 }
 
-.topics a{
+.topics a{    
     transition: .2s;
     text-decoration: none;
     border-bottom: 1px solid #fff;
     color: #fff;    
-    padding: .1rem;
+    padding: .5rem;
+    border-radius: 20px 20px 0 0;
 }
 
 .topics a:focus,
 .topics a:hover{
-    transition: .2s;
+    transition: .2s;    
     border-bottom: 1px solid #ffd500;
     color: #ffd500;
 }
@@ -78,29 +86,30 @@ header{
 @keyframes margin-container{
     from{
         margin-left: -40px;
+        opacity: 20%;
     }   
     to{
         margin-left: 0;
+        opacity: 100%;
     }
 }
 
 .ai-infos{    
     animation: margin-container 3s;
-    padding: 3rem;
+    padding: 8vmax;
     background-color: #ffffff48;
-    border-bottom: 2px solid #ffd500;
+    border-bottom: 6px double #fff;
 }
 
 .ai-infos h2{    
-    font-size: 7vmax;
+    font-size: 5vmax;
     font-weight: 500;
     color: #ffd500;
 }
 
 .ai-infos p{
     color: #fff;
-    font-size: 2.5vmax;    
-    margin-left: 2%;
+    font-size: 2.5vmax;        
 }
 
 /* ANIMATION */
@@ -113,7 +122,6 @@ header{
         opacity: 50%;
     }
 }
-
 
 #animation{
     animation: load-bar .5s 5;
@@ -138,23 +146,40 @@ header{
     color: #1282A2;
 }
 
+.sessions div:nth-child(odd) img{
+    float: left;
+    background-color: #ffa500;
+}
+
+.sessions img{
+    width: 30vmax;
+    height: 30vmax;
+    float: right;    
+    border-radius: 100%;
+    margin: 2%;
+}
+
 .sessions h2,
 .sessions h3{
     color: #ffa500;
-    font-weight: 400;
+    font-weight: 400;    
 }
 
 .sessions h2{
-    font-size: 4vmax;
+    font-size: 3vmax;
+    background-color: #ffa500;
+    color: #fff;
+    display: inline;
+    padding: 1%;    
 }
 
 .sessions h3{
-    font-size: 2.5vmax;
+    font-size: 2vmax;
 }
 
 .sessions p{
-    font-size: 2vw;
-    margin-left: 2%;
+    font-size: 2vmax;
+    margin: 1% 0 0 2%;
 }
 
 .text-list{
@@ -171,7 +196,7 @@ footer{
     background-color: #ffa500;
     text-align: center;
     padding: 3rem 2rem;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 footer a{
@@ -185,5 +210,5 @@ footer a:focus{
 
 footer i{
     color: #fff;
-    font-size: 60%;
+    font-size: 90%;
 }
